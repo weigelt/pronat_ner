@@ -1,0 +1,17 @@
+master:
+    script:
+        - mvn source:jar deploy -B
+    tags:
+        - mvn
+    only:
+        - master
+
+branches:
+    script:
+        - mvn test -B
+    tags:
+        - mvn
+    only:
+        - branches
+    except:
+        - master
