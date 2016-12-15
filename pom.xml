@@ -33,5 +33,9 @@
 			<groupId>org.kohsuke.metainf-services</groupId>
 			<artifactId>metainf-services</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>edu.kit.ipd.parse</groupId>
+			<artifactId>senna-wrapper</artifactId>
+		</dependency>
 	</dependencies>
 </project>
