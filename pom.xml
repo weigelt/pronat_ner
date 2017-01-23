@@ -9,6 +9,13 @@
 	<groupId>edu.kit.ipd.parse</groupId>
 	<artifactId>ner</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<repositories>
+		<repository>
+			<id>ipdNexus</id>
+			<name>IPD-Repository</name>
+			<url>http://bob.ipd.kit.edu/nexus/content/repositories/public/</url>
+		</repository>
+	</repositories>
 	<build>
 		<plugins>
 			<plugin>
