@@ -4,10 +4,10 @@
 	<parent>
 		<groupId>edu.kit.ipd.parse</groupId>
 		<artifactId>parse</artifactId>
-		<version>0.0.3</version>
+		<version>0.0.4</version>
 	</parent>
 	<artifactId>ner</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<repositories>
 		<repository>
         	<id>ipdNexus-public-releases</id>
