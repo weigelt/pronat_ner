@@ -1,4 +1,4 @@
-package edu.kit.ipd.parse.ner;
+package edu.kit.ipd.pronat.ner;
 
 import java.io.File;
 import java.io.IOException;
