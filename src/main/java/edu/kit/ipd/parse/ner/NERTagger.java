@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import edu.kit.ipd.pronat.prepipedatamodel.PrePipelineData;
+import edu.kit.ipd.pronat.prepipedatamodel.token.Token;
 import org.kohsuke.MetaInfServices;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,13 +17,11 @@ import org.slf4j.LoggerFactory;
 import edu.kit.ipd.parse.luna.data.AbstractPipelineData;
 import edu.kit.ipd.parse.luna.data.MissingDataException;
 import edu.kit.ipd.parse.luna.data.PipelineDataCastException;
-import edu.kit.ipd.parse.luna.data.PrePipelineData;
-import edu.kit.ipd.parse.luna.data.token.Token;
 import edu.kit.ipd.parse.luna.pipeline.IPipelineStage;
 import edu.kit.ipd.parse.luna.pipeline.PipelineStageException;
 import edu.kit.ipd.parse.luna.tools.ConfigManager;
-import edu.kit.ipd.parse.senna_wrapper.Senna;
-import edu.kit.ipd.parse.senna_wrapper.WordSennaResult;
+import edu.kit.ipd.pronat.senna_wrapper.Senna;
+import edu.kit.ipd.pronat.senna_wrapper.WordSennaResult;
 
 /**
  * This class represents a {@link IPipelineStage} which adds possible Named
@@ -62,7 +62,7 @@ public class NERTagger implements IPipelineStage {
 	@Override
 	public void exec(AbstractPipelineData data) throws PipelineStageException {
 		try {
-			prePipeData = data.asPrePipelineData();
+			prePipeData = (PrePipelineData) data.asPrePipelineData();
 		} catch (final PipelineDataCastException e) {
 			logger.error("Cannot process on data - PipelineData unreadable", e);
 			throw new PipelineStageException(e);
@@ -107,8 +107,8 @@ public class NERTagger implements IPipelineStage {
 	}
 
 	/**
-	 * This method parses the specified tokens with SENNA and returns the
-	 * contained words associated with their NER Tags
+	 * This method parses the specified tokens with SENNA and returns the contained
+	 * words associated with their NER Tags
 	 *
 	 * @param tokens
 	 *            The tokenss to process
