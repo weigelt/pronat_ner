@@ -12,9 +12,9 @@
     <name>Named Entity Recognizer</name>
     <repositories>
         <repository>
-            <id>ipdNexus-public-releases</id>
+            <id>ipdNexus-public-all</id>
             <name>IPD-Repository</name>
-            <url>http://bob.ipd.kit.edu/nexus/repository/maven-public-releases</url>
+            <url>https://bob.ipd.kit.edu/nexus/repository/maven-public-all</url>
         </repository>
     </repositories>
     <build>
