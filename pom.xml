@@ -10,13 +10,6 @@
     <artifactId>ner</artifactId>
     <version>0.0.3-SNAPSHOT</version>
     <name>Named Entity Recognizer</name>
-    <repositories>
-        <repository>
-            <id>ipdNexus-public-all</id>
-            <name>IPD-Repository</name>
-            <url>https://bob.ipd.kit.edu/nexus/repository/maven-public-all</url>
-        </repository>
-    </repositories>
     <build>
         <plugins>
             <plugin>
